@@ -36,8 +36,12 @@ public class Scrabble {
     }
 
     public Integer calculateScore(String wordToTest) {
-       char[] wordToCharArray = wordToTest.toCharArray();
-        Character charToCharacter = wordToCharArray[0];
-        return characterValues.get(charToCharacter);
+        char[] wordToCharArray = wordToTest.toCharArray();
+        Integer total = 0;
+        for (char individualChar : wordToCharArray) {
+            Character charToCharacter = individualChar;
+            total += characterValues.get(charToCharacter);
+        }
+        return total;
     }
 }
