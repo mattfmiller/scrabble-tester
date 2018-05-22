@@ -12,9 +12,16 @@ public class ScrabbleTest {
     }
 
     @Test
-    public void calculateScore_returnsScoreForSingleLetter_1() throws Exception {
+    public void calculateScore_returnsScoreForSingleLetter_8() throws Exception {
         Scrabble testScrabble = new Scrabble();
         Integer expected = 8;
         assertEquals(expected, testScrabble.calculateScore("j"));
+    }
+
+    @Test
+    public void calculateScore_returnsScoreForMultipleLetter_5() throws Exception {
+        Scrabble testScrabble = new Scrabble();
+        Integer expected = 5 ;
+        assertEquals(expected, testScrabble.calculateScore("dog"));
     }
 }
